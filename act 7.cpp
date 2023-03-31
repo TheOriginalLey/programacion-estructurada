@@ -20,7 +20,7 @@ programa para las operaciones de conjuntos
 using namespace std;
 
 char opca, opcb, i, tam;
-string conjuntoa [10], conjuntob [10], conjuntofinal [40];
+char conjuntoa [10], conjuntob [10], conjuntofinal [40];
 int seleccion, seleccionb, b=0, n=4;
 
 int main(){
@@ -45,7 +45,7 @@ int main(){
                         cout<<"ingresaras valores al conjunto 1"<<endl;
                          for (int i=0; i <= 10; i++){
                             cout<<i<<" ingresa los valores"<<endl;
-                            getline(cin,conjuntoa [i]);
+                            cin>>conjuntoa [i];
                          }
                     system("clear");
                         
@@ -54,7 +54,7 @@ int main(){
                             cout<<"ingresaras valores al conjunto 2"<<endl;
                             for (int i=0; i <= 10; i++){
                             cout<<i<<" ingresa los valores"<<endl;
-                            getline(cin,conjuntob [i]);
+                            cin>>conjuntob [i];
                             }
                     system("clear");
                     }//else para seleccionar el conjunto 2
@@ -79,16 +79,12 @@ int main(){
                         
                         if(seleccionb==1){
                             cout<<"eliminando valores al conjunto a"<<endl;
-                                for (auto &str : conjuntoa) {
-                               str.clear();
-                             }
+                             
                         }
 
                         else if(seleccionb>1){
                             cout<<"eliminando valores al conjunto b"<<endl;
-                                for (auto &str : conjuntob) {
-                               str.clear();
-                             }
+                            
                         }
                     seleccionb=0;
                     }
@@ -209,13 +205,7 @@ int main(){
                         
                         if(seleccionb==1){
                             cout<<"eliminando valores al conjunto 1"<<endl;
-                                for (auto &str : conjuntoa) {
-                               str.clear();
-                             }
-
-                               for (auto str : conjuntoa) {
-                               cout << str << endl;
-                             }
+                          
                             }
 
                         else if(seleccionb>1){
